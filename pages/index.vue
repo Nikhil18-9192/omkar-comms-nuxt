@@ -2,6 +2,7 @@
   <div class="home-page">
     <Hero />
     <Services />
+    <Testimonial />
   </div>
 </template>
 
