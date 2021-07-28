@@ -1,8 +1,14 @@
 <template>
   <div id="services">
+    <ServiceModal v-if="modal" :service="service" @dismiss="modal = false" />
     <h2 class="title">our services</h2>
     <div class="container">
-      <div class="card" v-for="(item, i) in services" :key="i">
+      <div
+        class="card"
+        v-for="(item, i) in services"
+        :key="i"
+        @click="openModal(item)"
+      >
         <img :src="item.icon" :alt="item.name" />
         <h4>{{ item.name }}</h4>
         <p>{{ item.desc }}</p>
@@ -15,6 +21,18 @@
 import { services } from '@/utils'
 export default {
   name: 'ServicesComponent',
+  data() {
+    return {
+      modal: false,
+      service: {},
+    }
+  },
+  methods: {
+    openModal(service) {
+      this.service = service
+      this.modal = true
+    },
+  },
   computed: {
     services() {
       return services
@@ -30,6 +48,9 @@ export default {
   height: 100%;
   background: #f9f9f9;
   padding: 60px 0 100px 0;
+  @include for-phone-only {
+    padding: 30px 0 50px 0;
+  }
 
   .title {
     text-align: center;
@@ -40,6 +61,9 @@ export default {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 47px;
+    @include for-phone-only {
+      margin-bottom: 30px;
+    }
   }
   .container {
     display: grid;
@@ -47,6 +71,9 @@ export default {
     max-width: 1136px;
     margin: 0 auto;
     gap: 0;
+    @include for-phone-only {
+      grid-template-columns: repeat(1, 1fr);
+    }
     .card {
       width: 379px;
       height: 275px;
@@ -57,6 +84,11 @@ export default {
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      @include for-phone-only {
+        width: 310px;
+        height: 255px;
+        margin: 0 auto;
+      }
       img {
         width: 100%;
         height: 50px;

@@ -54,6 +54,9 @@ export default {
   overflow: hidden;
   padding-top: 60px;
   padding-bottom: 100px;
+  @include for-phone-only {
+    padding-top: 25px;
+  }
   .skew {
     position: absolute;
     bottom: -40px;
@@ -85,6 +88,9 @@ export default {
     justify-content: center;
     align-items: center;
     min-height: 200px;
+    @include for-phone-only {
+      width: 95%;
+    }
     img {
       width: 32px;
       height: 32px;
