@@ -68,4 +68,22 @@ const services = [
   },
 ]
 
-export { menus, services }
+const testimonials = [
+  {
+    feedback:
+      '1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nulla quis dui turpis viverra in. Amet, dictum tincidunt leo risus eu. Rhoncus tortor elementum elit, pretium suspendisse ut aenean aliquet. Vehicula faucibus fusce a, quam.',
+    name: 'rtor elementum ',
+  },
+  {
+    feedback:
+      '2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nulla quis dui turpis viverra in. Amet, dictum tincidunt leo risus eu. Rhoncus tortor elementum elit, pretium suspendisse ut aenean aliquet. Vehicula faucibus fusce a, quam.',
+    name: 'rtor elementum ',
+  },
+  {
+    feedback:
+      '3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nulla quis dui turpis viverra in. Amet, dictum tincidunt leo risus eu. Rhoncus tortor elementum elit, pretium suspendisse ut aenean aliquet. Vehicula faucibus fusce a, quam.',
+    name: 'rtor elementum ',
+  },
+]
+
+export { menus, services, testimonials }

@@ -58,7 +58,7 @@ export default {
     #2e2e2e 0%,
     #101010 100%
   );
-  height: 120px;
+  height: 100px;
   width: 100%;
   border-bottom: 4px solid $primary;
   overflow: hidden;
