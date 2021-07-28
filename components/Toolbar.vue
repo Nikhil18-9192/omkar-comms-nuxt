@@ -63,24 +63,37 @@ export default {
   border-bottom: 4px solid $primary;
   overflow: hidden;
   padding-bottom: 24px;
+  @include for-phone-only {
+    height: 55px;
+  }
   .shape {
     position: absolute;
     right: 0;
+    display: none;
   }
   .container {
     margin: 0 120px;
     height: 100%;
     display: flex;
     align-items: flex-end;
+    @include for-phone-only {
+      margin: 0 20px;
+    }
     img {
       width: 138px;
       height: 33px;
       object-fit: contain;
       margin-right: 50px;
+      @include for-phone-only {
+        width: 110px;
+        margin-right: 0;
+      }
     }
     .navigation {
       display: flex;
-
+      @include for-phone-only {
+        display: none;
+      }
       .menu {
         margin-right: 42px;
 
