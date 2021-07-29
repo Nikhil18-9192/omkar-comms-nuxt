@@ -91,6 +91,9 @@ export default {
     @include for-phone-only {
       width: 95%;
     }
+    @include for-tablet-only {
+      width: 80%;
+    }
     img {
       width: 32px;
       height: 32px;

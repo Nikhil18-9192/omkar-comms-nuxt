@@ -74,6 +74,10 @@ export default {
     @include for-phone-only {
       grid-template-columns: repeat(1, 1fr);
     }
+    @include for-tablet-only {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 700px;
+    }
     .card {
       width: 379px;
       height: 275px;
@@ -88,6 +92,9 @@ export default {
         width: 310px;
         height: 255px;
         margin: 0 auto;
+      }
+      @include for-tablet-only {
+        width: 350px;
       }
       img {
         width: 100%;

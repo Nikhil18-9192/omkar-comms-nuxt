@@ -52,7 +52,7 @@ export default {
     height: 624px;
     background: #fff;
     @include for-phone-only {
-      width: 90%;
+      width: 95%;
       height: 665px;
     }
     .top {
@@ -80,7 +80,7 @@ export default {
         margin-left: 24px;
         @include for-phone-only {
           margin-left: 10px;
-          font-size: 12px;
+          font-size: 10px;
         }
       }
       .close {

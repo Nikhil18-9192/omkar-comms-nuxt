@@ -1,11 +1,14 @@
 <template>
   <div id="footer">
+    <ServiceModal v-if="modal" :service="service" @dismiss="modal = false" />
     <div class="container">
       <div class="top">
         <div class="quick-links">
           <h4 class="heading">Quick Links</h4>
           <div class="links">
-            <p v-for="(item, i) in services" :key="i">{{ item.name }}</p>
+            <p v-for="(item, i) in services" :key="i" @click="openModal(item)">
+              {{ item.name }}
+            </p>
           </div>
         </div>
         <div class="contact-us">
@@ -32,12 +35,18 @@
               rows="10"
               placeholder="Comments (Optional)"
             ></textarea>
-            <button>Submit</button>
+            <button @click="submit">Submit</button>
           </div>
         </div>
       </div>
       <div class="copyright">
         <p>copyright 2021 | All rights reserved</p>
+        <p class="formec-media">
+          Designed with ❤️ by
+          <a href="https://formecmedia.com/" target="_blank" rel="noopener"
+            >Formec Media.</a
+          >
+        </p>
       </div>
     </div>
   </div>
@@ -45,6 +54,7 @@
 
 <script>
 import { services } from '@/utils'
+import { formValidation } from '@/utils/validation'
 export default {
   name: 'FooterComponent',
   data() {
@@ -53,7 +63,26 @@ export default {
       number: '',
       interestedIn: '-- Select Service --',
       comment: '',
+      modal: false,
+      service: {},
     }
+  },
+  methods: {
+    openModal(service) {
+      this.service = service
+      this.modal = true
+    },
+    async submit() {
+      const { email, number, interestedIn, comment } = this
+      const validation = formValidation({
+        email,
+        number,
+      })
+      if (validation.error) {
+        this.$toast.error(validation.error.message)
+        return
+      }
+    },
   },
   computed: {
     services() {
@@ -80,14 +109,23 @@ export default {
     @include for-phone-only {
       max-width: 350px;
     }
+    @include for-tablet-only {
+      max-width: 700px;
+    }
     .top {
       display: flex;
       @include for-phone-only {
         flex-direction: column;
       }
+      @include for-tablet-only {
+        flex-direction: column;
+      }
       .quick-links {
         width: 50%;
         @include for-phone-only {
+          width: 100%;
+        }
+        @include for-tablet-only {
           width: 100%;
         }
         .heading {
@@ -114,12 +152,18 @@ export default {
             text-transform: capitalize;
             color: #a0a0a0;
             margin-bottom: 14px;
+            @include for-phone-only {
+              font-size: 10px;
+            }
           }
         }
       }
       .contact-us {
         width: 50%;
         @include for-phone-only {
+          width: 100%;
+        }
+        @include for-tablet-only {
           width: 100%;
         }
         .heading {
@@ -132,6 +176,10 @@ export default {
           text-align: right;
           margin-bottom: 45px;
           @include for-phone-only {
+            text-align: left;
+            margin-bottom: 18px;
+          }
+          @include for-tablet-only {
             text-align: left;
             margin-bottom: 18px;
           }
@@ -225,6 +273,8 @@ export default {
     .copyright {
       padding: 10px 0;
       border-bottom: 0.5px solid #979797;
+      display: flex;
+      justify-content: space-between;
       p {
         font-weight: 400;
         font-size: 10px;

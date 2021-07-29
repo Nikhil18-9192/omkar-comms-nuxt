@@ -1,7 +1,5 @@
 <template>
-  <div id="hero">
-    <img src="/hero.jpg" alt="hero image" />
-  </div>
+  <div id="hero"></div>
 </template>
 
 <script>
@@ -15,6 +13,16 @@ export default {
   position: relative;
   width: 100%;
   height: 500px;
+  background-image: url('/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  @include for-phone-only {
+    background-position: 51% 100%;
+  }
+  @include for-tablet-only {
+    background-position: 50% 100%;
+  }
   img {
     width: 100%;
     height: 100%;

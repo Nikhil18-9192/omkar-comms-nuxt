@@ -66,10 +66,18 @@ export default {
   @include for-phone-only {
     height: 55px;
   }
+  @include for-tablet-only {
+    height: 65px;
+  }
   .shape {
     position: absolute;
     right: 0;
-    display: none;
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-only {
+      display: none;
+    }
   }
   .container {
     margin: 0 120px;
@@ -78,6 +86,9 @@ export default {
     align-items: flex-end;
     @include for-phone-only {
       margin: 0 20px;
+    }
+    @include for-tablet-only {
+      margin: 0 30px;
     }
     img {
       width: 138px;
