@@ -36,6 +36,8 @@ export default {
 </script>
 <style lang="scss">
 html {
+  font-family: 'Milliard';
+  font-style: normal;
   width: 100%;
   position: relative;
   scroll-behavior: smooth;

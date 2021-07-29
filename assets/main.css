@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Milliard';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Milliard'),
+    url('~assets/fonts/Milliard-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Milliard';
+  font-style: normal;
+  font-weight: 300;
+
+  src: local('Milliard'),
+    url('~assets/fonts/Milliard-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Milliard';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Milliard'),
+    url('~assets/fonts/Milliard-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Milliard';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Milliard'), url('~assets/fonts/Milliard-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Milliard';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Milliard'), url('~assets/fonts/Milliard-Book.woff') format('woff');
+}
