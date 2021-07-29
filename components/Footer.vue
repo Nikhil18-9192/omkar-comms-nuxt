@@ -281,6 +281,9 @@ export default {
         line-height: 185.5%;
         text-transform: capitalize;
         color: #292929;
+        @include for-phone-only {
+          font-size: 9px;
+        }
       }
     }
   }

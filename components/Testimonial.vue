@@ -89,7 +89,7 @@ export default {
     align-items: center;
     min-height: 200px;
     @include for-phone-only {
-      width: 95%;
+      width: 93%;
     }
     @include for-tablet-only {
       width: 80%;

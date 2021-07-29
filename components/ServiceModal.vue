@@ -53,7 +53,7 @@ export default {
     background: #fff;
     @include for-phone-only {
       width: 95%;
-      height: 665px;
+      height: 93%;
     }
     .top {
       position: relative;
