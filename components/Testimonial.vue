@@ -56,6 +56,7 @@ export default {
   padding-bottom: 100px;
   @include for-phone-only {
     padding-top: 25px;
+    padding-bottom: 150px;
   }
   .skew {
     position: absolute;

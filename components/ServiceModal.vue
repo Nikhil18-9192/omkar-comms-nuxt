@@ -52,9 +52,18 @@ export default {
     height: 90%;
     background: #fff;
     overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f9f9f9;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
     @include for-phone-only {
       width: 95%;
-      height: 93%;
+      height: 95%;
     }
     .top {
       position: relative;
