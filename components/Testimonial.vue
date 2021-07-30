@@ -54,6 +54,7 @@ export default {
   overflow: hidden;
   padding-top: 60px;
   padding-bottom: 100px;
+  box-sizing: border-box;
   @include for-phone-only {
     padding-top: 25px;
     padding-bottom: 150px;

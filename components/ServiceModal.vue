@@ -63,7 +63,7 @@ export default {
     }
     @include for-phone-only {
       width: 95%;
-      height: 98%;
+      height: 90%;
     }
     .top {
       position: relative;
@@ -116,20 +116,25 @@ export default {
         margin-bottom: 15px;
         @include for-phone-only {
           margin-bottom: 8px;
+          font-size: 14px;
         }
       }
       .desc {
         margin-bottom: 20px;
         @include for-phone-only {
           margin-bottom: 12px;
+          font-size: 12px;
         }
       }
       .advantages {
         margin-bottom: 8px;
+        font-size: 12px;
       }
       .btn {
         margin-top: 35px;
-
+        @include for-phone-only {
+          margin-top: 20px;
+        }
         .enquire-btn {
           text-decoration: none;
           width: 134px;
