@@ -63,7 +63,7 @@ export default {
     }
     @include for-phone-only {
       width: 95%;
-      height: 95%;
+      height: 98%;
     }
     .top {
       position: relative;
