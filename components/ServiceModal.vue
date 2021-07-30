@@ -49,8 +49,9 @@ export default {
   .container {
     position: relative;
     width: 60%;
-    height: 624px;
+    height: 90%;
     background: #fff;
+    overflow-y: scroll;
     @include for-phone-only {
       width: 95%;
       height: 93%;
