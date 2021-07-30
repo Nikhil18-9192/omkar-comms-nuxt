@@ -135,9 +135,15 @@ export default {
 .slide-enter {
   opacity: 0;
   transform: translateX(50%);
+  @include for-phone-only {
+    transform: translateX(100%);
+  }
 }
 .slide-leave-to {
   opacity: 0;
   transform: translateX(-50%);
+  @include for-phone-only {
+    transform: translateX(-100%);
+  }
 }
 </style>
